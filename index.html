@@ -18,7 +18,6 @@
     	table {
         	border-collapse: collapse;
         	width: auto;
-        	/*padding: 2;*/
         }
 
         /* Espacamento entre linhas e colunas */
@@ -88,8 +87,14 @@
         // Direcao de ordenacao
       	var sortAscending = true;
 
+      	// Carregando nome do arquivo atraves do iframe
+      	var file_path = window.location.search.substring(window.location.search.indexOf('file_path=') + 5);
+		if (file_path.indexOf('&') >= 0) {
+		    file_path = file_path.substring(0, file_path.indexOf('&'));
+		}
+
 		// Carregando os dados
-		d3.json("data_file.json", function(data) {
+		d3.json(file_path, function(data) {
 			// Definicao dos headers
 			// titulo, class (definicoes de estilo), cspan (quantidade de celulas ocupadas)
 			var headers = [
