@@ -1,0 +1,6 @@
+[
+	{"Flag": "uruguay", "Team": "Uruguai", "Points": 3, "First": 0.67, "Second": 0.23, "Third": 0.08, "Fourth": 0.02},
+	{"Flag": "russia", "Team": "Rússia", "Points": 3, "First": 0.22, "Second": 0.41, "Third": 0.25, "Fourth": 0.12},
+	{"Flag": "egypt", "Team": "Egito", "Points": 0, "First": 0.07, "Second": 0.22, "Third": 0.27, "Fourth": 0.34},
+	{"Flag": "saudi-arabia", "Team": "Arábia Saudita", "Points": 0, "First": 0.05, "Second": 0.14, "Third": 0.30, "Fourth": 0.51}
+]
