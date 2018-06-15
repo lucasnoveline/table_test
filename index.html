@@ -68,6 +68,12 @@
 <body>
 	<!-- Codigo Javascript - Criacao de elementos e interatividade -->
 	<script type="text/javascript">
+		var seed = window.location.search.substring(window.location.search.indexOf('seed=') + 5);
+		if (seed.indexOf('&') >= 0) {
+		    seed = seed.substring(0, seed.indexOf('&'));
+		}
+		
+		console.log(seed);
 		// Definicao do operador 'f' (pertence a lib 'jetpack-starter-kit.js')
 		// f() == function(d) { return d; }
 		// f('object') == function(d) { return d.object; }
