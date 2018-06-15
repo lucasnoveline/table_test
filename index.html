@@ -21,7 +21,7 @@
         }
 
         /* Espacamento entre linhas e colunas */
-        th,td { padding: 10px; }
+        th,td { padding: 5px; }
 
         /* Bordas em baixo no header e nas celulas */
         th { border-bottom: 3px solid black; }
@@ -36,11 +36,11 @@
 	       border-right: 3px solid black;
 	     }
 
-	    table th:nth-child(1){
+	    table th:nth-child(2){
 	       border-right: 3px solid black;
 	     }
 
-		table td:nth-child(2){
+		table td:nth-child(3){
 	       border-right: 3px solid black;
 	     }
 
@@ -49,8 +49,8 @@
 
         /* Table data */
         td.img { text-align: center; } /* Imagens */
-        td.name { text-align: center; } /* Nomes */
-        td.num { text-align: left; } /* Nomes */
+        td.name { text-align: left; } /* Nomes */
+        td.num { text-align: center; } /* Nomes */
 
         /* Adicionando as setas de sort */
         th.des:after {
@@ -66,12 +66,6 @@
 <body>
 	<!-- Codigo Javascript - Criacao de elementos e interatividade -->
 	<script type="text/javascript">
-		var seed = window.location.search.substring(window.location.search.indexOf('seed=') + 5);
-		if (seed.indexOf('&') >= 0) {
-		    seed = seed.substring(0, seed.indexOf('&'));
-		}
-		
-		console.log(seed);
 		// Definicao do operador 'f' (pertence a lib 'jetpack-starter-kit.js')
 		// f() == function(d) { return d; }
 		// f('object') == function(d) { return d.object; }
@@ -86,7 +80,7 @@
 
         var bad = d3.scale.linear()
                             .domain([0,100])
-                            .range(['white','#A52A2A']);
+                            .range(['white','#FF3030']);
 
         var color_control = {First: good, Second: good, Third: bad, Fourth: bad};
 
@@ -99,7 +93,7 @@
 			// titulo, class (definicoes de estilo), cspan (quantidade de celulas ocupadas)
 			var headers = [
 			{ titulo: 'Seleção', class: 'header', id: 'Team', cspan: 2, width: 50 },
-			{ titulo: 'Pontos', class: 'header', id: 'Points', cspan: 1, width: 40 },
+			{ titulo: 'Pts', class: 'header', id: 'Points', cspan: 1, width: 40 },
 			{ titulo: '1°', class: 'header', id: 'First', cspan: 1, width: 40 },
 			{ titulo: '2°', class: 'header', id: 'Second', cspan: 1, width: 40 },
 			{ titulo: '3°', class: 'header', id: 'Third', cspan: 1, width: 40 },
@@ -199,7 +193,7 @@
 			// Funcoes de processamento dos dados
 			// Retorna numero em porcentagem sem casas decimais
 			function percent() {
-            	return function(f) { return Math.floor(100 * f) % 100 + '%'; };
+            	return function(f) { return Math.floor(100 * f) + '%'; };
         	};
         	// A partir do nome do pais, retorna a bandeira
         	function input_img() {
