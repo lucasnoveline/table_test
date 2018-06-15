@@ -89,7 +89,7 @@
 
       	// Carregando nome do arquivo atraves do iframe
 	var test1 = window.location.search.substring(1);
-      	var test2 = window.location.search.substring(window.location.search.indexOf('file_path='));
+      	var test2 = window.location.search.substring(window.location.search.indexOf('file_path=') + 10);
 	console.log(test1);
 	console.log(test2);
 	file_path = '/groupA/data_file.json'
