@@ -88,10 +88,10 @@
       	var sortAscending = true;
 
       	// Carregando nome do arquivo atraves do iframe
-      	var file_path = window.location.search.substring(window.location.search.indexOf('file_path=') + 5);
-		if (file_path.indexOf('&') >= 0) {
-		    file_path = file_path.substring(0, file_path.indexOf('&'));
-		}
+	var test1 = window.location.search.substring(1);
+      	var test2 = window.location.search.substring(window.location.search.indexOf('file_path='));
+	console.log(test1);
+	console.log(test2);
 
 		// Carregando os dados
 		d3.json(file_path, function(data) {
